@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <script>
+
+    function Rotate() {
+      $('#pic1').toggleClass("leftRotate");
+      $('#pic2').toggleClass("leftRotate");
+      $('#pic3').toggleClass("leftRotate");
+      $('#pic4').toggleClass("leftRotate");
+      $('#pic4').toggleClass("rightRotate");
+      $('#pic5').toggleClass("leftRotate");
+      $('#pic5').toggleClass("rightRotate");
+      $('#pic6').toggleClass("leftRotate");
+      $('#pic6').toggleClass("rightRotate");
+    }
+
+        window.onload = function() {
+          setInterval(Rotate, 1000);
+        }
+
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <style type="text/css">
+        body {
+            background-image: url(cloud.gif);
+            background-repeat: repeat;
+            text-align: center;
+        }
+
+        #thanks {
+            font-family: 'Gloria Hallelujah', fantasy;
+            font-size: 2em;
+            margin: auto;
+            width:50%;
+            height:10%;
+            margin-top:20%;
+            z-index: -5;
+            background-color: white;
+            border-radius: 5px;
+        }
+        h1, h2 {
+          margin-bottom: 0px;
+          padding-bottom:0px;
+          margin-top:0px;
+          padding-top:0px;
+        }
+
+        #imageShow img {
+            height: 40%;
+            border-radius:50%;
+            position:absolute;
+            z-index: -5;
+        }
+
+        #fireworks img {
+          position:absolute;
+          opacity: .7;
+        }
+
+        #fireworks1 {
+          top:20%;
+        }
+        #fireworks2 {
+          top:30%;
+          left:5%;
+        }
+        #fireworks3 {
+          top:20%;
+          left:30%;
+        }
+        #fireworks4 {
+          top:40%;
+          left:15%;
+        }
+        #fireworks5 {
+          top:30%;
+          left:10%;
+        }
+        #fireworks6 {
+          left:15%;
+        }
+        #fireworks7 {
+          top:70%;
+          left:70%;
+        }
+        #fireworks8 {
+          top:10%;
+          left:80%;
+        }
+        #fireworks9{
+          top:13%;
+          left:55%;
+        }
+        #fireworks10{
+          top:3%;
+          left:3%;
+        }
+        #pic1 {
+          top:1%;
+          left:1%;
+        }
+        #pic3 {
+          top:1%;
+          right:1%;
+        }
+        #pic5 {
+          bottom:0%;
+          right:36%;
+        }
+        #pic4 {
+          bottom:1%;
+          right:1%;
+        }
+        #pic2 {
+          bottom:1%;
+          left:1%;
+        }
+        #pic6 {
+          top:-3%;
+          left:36%;
+        }
+
+        .rightRotate {
+          transform: rotate(30deg);
+          transition: 1s ease-in-out;
+          -webkit-transition: 1s ease-in-out;
+          -moz-transition: 1s ease-in-out;
+          -o-transition: 1s ease-in-out;
+        }
+
+        .leftRotate {
+          transform: rotate(-30deg);
+          transition: 1s ease-in-out;
+          -webkit-transition: 1s ease-in-out;
+          -moz-transition: 1s ease-in-out;
+          -o-transition: 1s ease-in-out;
+        }
+        @media only screen and (max-width: 750px) {
+          #imageShow img {
+              height:25%;
+          }
+          #thanks {
+            margin-top:35%;
+            width:100%;
+          }
+          h1, h2 {
+            font-size:1.5em;
+          }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+    <div id="thanks">
+        <h1>THANK YOU</h1>
+        <h2>From the Millvale Makers!</h2>
+
+        <div id="fireworks">
+        <img id="fireworks1" class="photo" src="fireworks1.gif">
+        <img id="fireworks2" class="photo" src="fireworks2.gif">
+        <img id="fireworks3" class="photo" src="fireworks3.gif">
+        <img id="fireworks4" class="photo" src="fireworks4.gif">
+        <img id="fireworks5" class="photo" src="fireworks5.gif">
+        <img id="fireworks6" class="photo" src="fireworks1.gif">
+        <img id="fireworks7" class="photo" src="fireworks2.gif">
+        <img id="fireworks8" class="photo" src="fireworks3.gif">
+        <img id="fireworks9" class="photo" src="fireworks4.gif">
+        <img id="fireworks10" class="photo" src="fireworks5.gif">
+      </div>
+
+    </div>
+
+        <div id="imageShow">
+          <img id="pic1" class="rightRotate" class="photo" src="pic1.jpeg">
+          <img id="pic2" class="rightRotate" class="photo" src="pic2.jpeg">
+          <img id="pic3" class="rightRotate" class="photo" src="pic3.jpeg">
+          <img id="pic4" class="leftRotate" class="photo" src="pic4.jpeg">
+          <img id="pic5" class="leftRotate" class="photo" src="pic5.jpeg">
+          <img id="pic6" class="leftRotate" class="photo" src="pic6.png">
+        </div>
+
+</body>
